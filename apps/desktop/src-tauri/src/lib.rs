@@ -8,11 +8,54 @@ pub fn run() {
 
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
-        .plugin(tauri_plugin_sql::Builder::default().build())
+        .plugin(
+            tauri_plugin_sql::Builder::default()
+                .add_migrations(
+                    "sqlite:aios.db",
+                    vec![tauri_plugin_sql::Migration {
+                        version: 1,
+                        description: "create_initial_tables",
+                        sql: r#"
+                            CREATE TABLE IF NOT EXISTS runs (
+                                id TEXT PRIMARY KEY,
+                                task TEXT NOT NULL,
+                                status TEXT NOT NULL DEFAULT 'pending',
+                                started_at TEXT NOT NULL,
+                                completed_at TEXT,
+                                error TEXT
+                            );
+                            CREATE TABLE IF NOT EXISTS messages (
+                                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                run_id TEXT NOT NULL,
+                                role TEXT NOT NULL,
+                                content TEXT NOT NULL,
+                                created_at TEXT NOT NULL DEFAULT (datetime('now')),
+                                FOREIGN KEY(run_id) REFERENCES runs(id)
+                            );
+                        "#,
+                        kind: tauri_plugin_sql::MigrationKind::Up,
+                    }],
+                )
+                .build(),
+        )
         .setup(|app| {
+            use std::sync::Mutex;
+            use crate::services::keyring_service::KeyringService;
+            use crate::state::AppState;
+
             // Set activation policy on macOS to hide from dock (tray-only)
             #[cfg(target_os = "macos")]
             app.set_activation_policy(ActivationPolicy::Accessory);
+
+            // Initialize KeyringService with app data directory
+            let app_data_dir = app.path().app_data_dir()
+                .expect("Failed to get app data directory");
+            let keyring_service = KeyringService::new("com.aios.secrets", app_data_dir)
+                .expect("Failed to initialize KeyringService");
+
+            // Initialize and manage AppState
+            let app_state = AppState::new(keyring_service);
+            app.manage(Mutex::new(app_state));
 
             // Create system tray menu
             let show_item = MenuItem::with_id(app, "show", "Show", true, None::<&str>)?;
