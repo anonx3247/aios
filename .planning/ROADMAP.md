@@ -65,10 +65,12 @@ Plans:
   3. Frontend can call Node backend HTTP API and receive responses
   4. Node backend sidecar starts automatically with Tauri app
   5. Sidecar process terminates cleanly when Tauri app closes (no orphans)
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: [TBD during planning]
+- [ ] 03-01-PLAN.md — Backend server: dynamic port, graceful shutdown, pkg binary build
+- [ ] 03-02-PLAN.md — Frontend API client and App.tsx backend status display
+- [ ] 03-03-PLAN.md — Tauri sidecar integration, port discovery, and end-to-end verification
 
 ### Phase 4: Launcher UI
 **Goal**: User can dispatch tasks via spotlight-style launcher
