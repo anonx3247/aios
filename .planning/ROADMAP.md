@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Monorepo root, Tauri desktop app, Nix flake
+- [x] 01-01-PLAN.md — Monorepo root, Tauri desktop app, Nix flake (completed 2026-01-31)
 - [ ] 01-02-PLAN.md — Backend (Hono), shared packages, TypeScript config, ESLint
 
 ### Phase 2: Tauri Shell
@@ -147,7 +147,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup | 0/TBD | Not started | - |
+| 1. Project Setup | 1/2 | In progress | - |
 | 2. Tauri Shell | 0/TBD | Not started | - |
 | 3. Node Backend | 0/TBD | Not started | - |
 | 4. Launcher UI | 0/TBD | Not started | - |
