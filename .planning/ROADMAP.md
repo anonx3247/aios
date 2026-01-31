@@ -32,10 +32,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Development environment runs via nix-shell with all dependencies available
   3. TypeScript compilation and linting work across all layers
   4. Build commands execute without errors (pnpm install, pnpm dev, pnpm build)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: [TBD during planning]
+- [ ] 01-01-PLAN.md — Monorepo root, Tauri desktop app, Nix flake
+- [ ] 01-02-PLAN.md — Backend (Hono), shared packages, TypeScript config, ESLint
 
 ### Phase 2: Tauri Shell
 **Goal**: Operational Tauri app with SQLite database and IPC commands
