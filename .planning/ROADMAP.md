@@ -47,10 +47,13 @@ Plans:
   2. SQLite database initializes on first launch with schema for runs and messages
   3. Tauri commands are callable from frontend via IPC (test command works)
   4. App can be built as production binary (pnpm tauri build succeeds)
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: [TBD during planning]
+- [ ] 02-01-PLAN.md — Rust project structure, error types, frameless window, system tray
+- [ ] 02-02-PLAN.md — Keyring secrets management and SQLite database initialization
+- [ ] 02-03-PLAN.md — MCP server config and process lifecycle management
+- [ ] 02-04-PLAN.md — Final integration, wiring, and production build verification
 
 ### Phase 3: Node Backend
 **Goal**: React frontend and Hono HTTP server operational
@@ -148,7 +151,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup | 2/2 | Complete | 2026-01-31 |
-| 2. Tauri Shell | 0/TBD | Not started | - |
+| 2. Tauri Shell | 0/4 | Not started | - |
 | 3. Node Backend | 0/TBD | Not started | - |
 | 4. Launcher UI | 0/TBD | Not started | - |
 | 5. Agent Runtime | 0/TBD | Not started | - |
