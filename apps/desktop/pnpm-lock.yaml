@@ -1,0 +1,4 @@
+# Workaround for Tauri CLI pnpm detection in monorepos
+# This empty file signals to Tauri CLI to use pnpm instead of defaulting to npm
+# See: https://github.com/tauri-apps/tauri/issues/11859
+lockfileVersion: '9.0'
