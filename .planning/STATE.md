@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 ## Current Position
 
 Phase: 2 of 8 (Tauri Shell)
-Plan: 2 of 3 in phase
-Status: In progress
-Last activity: 2026-01-31 - Completed 02-02-PLAN.md (Secrets Management & Database)
+Plan: 3 of 3 in phase
+Status: Phase complete
+Last activity: 2026-01-31 - Completed 02-03-PLAN.md (MCP Server Management)
 
-Progress: [██████░░░░] 66.7%
+Progress: [████████░░] 83.3%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 5.3 min
-- Total execution time: 0.35 hours
+- Total plans completed: 5
+- Average duration: 4.8 min
+- Total execution time: 0.40 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Project Setup | 2/2 | 11 min | 5.5 min |
-| 2. Tauri Shell | 2/3 | 10 min | 5.0 min |
+| 2. Tauri Shell | 3/3 | 14 min | 4.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (8min), 01-02 (3min), 02-01 (5min), 02-02 (5min)
-- Trend: Consistent 5min average maintained
+- Last 5 plans: 01-02 (3min), 02-01 (5min), 02-02 (5min), 02-03 (4min)
+- Trend: Accelerating - Phase 2 faster than Phase 1
 
 *Updated after each plan completion*
 
@@ -62,6 +62,10 @@ Recent decisions affecting current work:
 - JSON file persistence for keyring keys - survives app restarts (02-02)
 - Automatic stale key cleanup - handles external deletions (02-02)
 - TEXT for SQLite timestamps - ISO 8601 strings, SQLite best practice (02-02)
+- Arc<McpManager> in AppState - prevents MutexGuard held across await (02-03)
+- kill_on_drop for process cleanup - automatic on app exit (02-03)
+- Pass all keyring secrets as env vars - simpler than per-server config (02-03)
+- Empty MCP config auto-creation - better UX on first launch (02-03)
 
 ### Pending Todos
 
@@ -69,10 +73,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- Database creation pending verification (port conflict prevented dev server test in 02-02, will verify in 02-03)
+None - Phase 2 complete. Ready for Phase 3 (Agent Runtime).
 
 ## Session Continuity
 
-Last session: 2026-01-31T02:40:24Z - Plan execution
-Stopped at: Completed 02-02-PLAN.md, Phase 2 plan 2 of 3
+Last session: 2026-01-31T02:47:10Z - Plan execution
+Stopped at: Completed 02-03-PLAN.md, Phase 2 complete (3/3 plans)
 Resume file: None
