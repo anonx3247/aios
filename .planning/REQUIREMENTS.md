@@ -81,7 +81,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFR-05 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Complete |
 | INFR-01 | Phase 2 | Pending |
 | INFR-04 | Phase 2 | Pending |
 | INFR-02 | Phase 3 | Pending |
