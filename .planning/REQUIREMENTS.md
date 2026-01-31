@@ -81,30 +81,30 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFR-01 | | Pending |
-| INFR-02 | | Pending |
-| INFR-03 | | Pending |
-| INFR-04 | | Pending |
-| INFR-05 | | Pending |
-| LNCH-01 | | Pending |
-| LNCH-02 | | Pending |
-| LNCH-03 | | Pending |
-| LNCH-04 | | Pending |
-| AGNT-01 | | Pending |
-| AGNT-02 | | Pending |
-| AGNT-03 | | Pending |
-| AGNT-04 | | Pending |
-| MEM-01 | | Pending |
-| MEM-02 | | Pending |
-| MEM-03 | | Pending |
-| NOTF-01 | | Pending |
-| NOTF-02 | | Pending |
+| INFR-05 | Phase 1 | Pending |
+| INFR-01 | Phase 2 | Pending |
+| INFR-04 | Phase 2 | Pending |
+| INFR-02 | Phase 3 | Pending |
+| INFR-03 | Phase 3 | Pending |
+| LNCH-01 | Phase 4 | Pending |
+| LNCH-02 | Phase 4 | Pending |
+| LNCH-03 | Phase 4 | Pending |
+| LNCH-04 | Phase 4 | Pending |
+| AGNT-01 | Phase 5 | Pending |
+| AGNT-02 | Phase 5 | Pending |
+| AGNT-03 | Phase 6 | Pending |
+| AGNT-04 | Phase 6 | Pending |
+| MEM-01 | Phase 7 | Pending |
+| MEM-02 | Phase 7 | Pending |
+| MEM-03 | Phase 7 | Pending |
+| NOTF-01 | Phase 8 | Pending |
+| NOTF-02 | Phase 8 | Pending |
 
 **Coverage:**
 - v1 requirements: 18 total
-- Mapped to phases: 0
-- Unmapped: 18 ⚠️
+- Mapped to phases: 18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-31*
-*Last updated: 2026-01-31 after initial definition*
+*Last updated: 2026-01-31 after roadmap creation*
