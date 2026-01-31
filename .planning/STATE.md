@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-01-31)
 ## Current Position
 
 Phase: 2 of 8 (Tauri Shell)
-Plan: 3 of 3 in phase
+Plan: 4 of 4 in phase
 Status: Phase complete
-Last activity: 2026-01-31 - Completed 02-03-PLAN.md (MCP Server Management)
+Last activity: 2026-01-31 - Completed 02-04-PLAN.md (Integration & Verification)
 
-Progress: [████████░░] 83.3%
+Progress: [██████░░░░░░░░░░░░░░] 30.0%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 4.8 min
-- Total execution time: 0.40 hours
+- Total plans completed: 6
+- Average duration: 5.5 min
+- Total execution time: 0.55 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Project Setup | 2/2 | 11 min | 5.5 min |
-| 2. Tauri Shell | 3/3 | 14 min | 4.7 min |
+| 2. Tauri Shell | 4/4 | 27 min | 6.8 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (3min), 02-01 (5min), 02-02 (5min), 02-03 (4min)
-- Trend: Accelerating - Phase 2 faster than Phase 1
+- Last 5 plans: 02-01 (5min), 02-02 (5min), 02-03 (4min), 02-04 (13min)
+- Trend: Phase 2 complete - Integration testing took longer (includes human verification)
 
 *Updated after each plan completion*
 
@@ -66,6 +66,9 @@ Recent decisions affecting current work:
 - kill_on_drop for process cleanup - automatic on app exit (02-03)
 - Pass all keyring secrets as env vars - simpler than per-server config (02-03)
 - Empty MCP config auto-creation - better UX on first launch (02-03)
+- System tray requires explicit .icon() call - even if configured in tauri.conf.json (02-04)
+- icon_as_template(true) for dark mode - proper macOS system tray appearance (02-04)
+- SQLite DB creation deferred to frontend - tauri-plugin-sql creates on Database.load() (02-04)
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None - Phase 2 complete. Ready for Phase 3 (Agent Runtime).
 
 ## Session Continuity
 
-Last session: 2026-01-31T02:47:10Z - Plan execution
-Stopped at: Completed 02-03-PLAN.md, Phase 2 complete (3/3 plans)
+Last session: 2026-01-31T03:02:02Z - Plan execution
+Stopped at: Completed 02-04-PLAN.md, Phase 2 complete (4/4 plans)
 Resume file: None
