@@ -10,7 +10,24 @@
     "core:window:allow-show",
     "core:window:allow-set-focus",
     "shell:allow-open",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/backend",
+          "sidecar": true,
+          "args": true
+        }
+      ]
+    },
     "sql:default",
-    "sql:allow-execute"
+    "sql:allow-execute",
+    "http:default",
+    {
+      "identifier": "http:allow-fetch",
+      "allow": [
+        { "url": "http://localhost:*" }
+      ]
+    }
   ]
 }
