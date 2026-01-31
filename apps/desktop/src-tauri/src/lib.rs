@@ -41,6 +41,8 @@ pub fn run() {
         .setup(|app| {
             use std::sync::Mutex;
             use crate::services::keyring_service::KeyringService;
+            use crate::services::mcp_manager::McpManager;
+            use crate::services::config_loader;
             use crate::state::AppState;
 
             // Set activation policy on macOS to hide from dock (tray-only)
@@ -50,12 +52,23 @@ pub fn run() {
             // Initialize KeyringService with app data directory
             let app_data_dir = app.path().app_data_dir()
                 .expect("Failed to get app data directory");
-            let keyring_service = KeyringService::new("com.aios.secrets", app_data_dir)
+            let keyring_service = KeyringService::new("com.aios.secrets", app_data_dir.clone())
                 .expect("Failed to initialize KeyringService");
 
+            // Load MCP configuration
+            let mcp_config_path = config_loader::default_config_path(&app_data_dir);
+            let mcp_config = config_loader::load(&mcp_config_path)
+                .expect("Failed to load MCP configuration");
+
+            // Initialize McpManager
+            let mcp_manager = McpManager::new(mcp_config);
+
             // Initialize and manage AppState
-            let app_state = AppState::new(keyring_service);
+            let app_state = AppState::new(keyring_service, mcp_manager);
             app.manage(Mutex::new(app_state));
+
+            // Note: MCP processes are automatically cleaned up via kill_on_drop(true)
+            // when the app exits. No explicit shutdown hook needed.
 
             // Create system tray menu
             let show_item = MenuItem::with_id(app, "show", "Show", true, None::<&str>)?;
@@ -101,7 +114,10 @@ pub fn run() {
             commands::secrets::get_secrets,
             commands::secrets::get_secret,
             commands::secrets::set_secret,
-            commands::secrets::delete_secret
+            commands::secrets::delete_secret,
+            commands::mcp::start_mcp_server,
+            commands::mcp::stop_mcp_server,
+            commands::mcp::list_mcp_servers
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
