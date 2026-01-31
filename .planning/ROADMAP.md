@@ -12,7 +12,7 @@ AIOS delivers a spotlight-style agent launcher through eight foundational phases
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Setup** - Clean project structure with proper separation of concerns
+- [x] **Phase 1: Project Setup** - Clean project structure with proper separation of concerns
 - [ ] **Phase 2: Tauri Shell** - Rust backend with SQLite persistence
 - [ ] **Phase 3: Node Backend** - React frontend and Hono server
 - [ ] **Phase 4: Launcher UI** - Spotlight-style task dispatch interface
@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Monorepo root, Tauri desktop app, Nix flake (completed 2026-01-31)
-- [ ] 01-02-PLAN.md — Backend (Hono), shared packages, TypeScript config, ESLint
+- [x] 01-02-PLAN.md — Backend (Hono), shared packages, TypeScript config, ESLint (completed 2026-01-31)
 
 ### Phase 2: Tauri Shell
 **Goal**: Operational Tauri app with SQLite database and IPC commands
@@ -147,7 +147,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup | 1/2 | In progress | - |
+| 1. Project Setup | 2/2 | Complete | 2026-01-31 |
 | 2. Tauri Shell | 0/TBD | Not started | - |
 | 3. Node Backend | 0/TBD | Not started | - |
 | 4. Launcher UI | 0/TBD | Not started | - |
