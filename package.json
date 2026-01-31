@@ -1,0 +1,14 @@
+{
+  "name": "@aios/monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @aios/desktop dev",
+    "build": "pnpm --filter @aios/desktop build",
+    "dev:backend": "pnpm --filter @aios/backend dev",
+    "lint": "eslint .",
+    "typecheck": "tsc -b"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
