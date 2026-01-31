@@ -82,8 +82,8 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | INFR-05 | Phase 1 | Complete |
-| INFR-01 | Phase 2 | Pending |
-| INFR-04 | Phase 2 | Pending |
+| INFR-01 | Phase 2 | Complete |
+| INFR-04 | Phase 2 | Complete |
 | INFR-02 | Phase 3 | Pending |
 | INFR-03 | Phase 3 | Pending |
 | LNCH-01 | Phase 4 | Pending |

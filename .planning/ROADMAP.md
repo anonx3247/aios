@@ -13,7 +13,7 @@ AIOS delivers a spotlight-style agent launcher through eight foundational phases
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Project Setup** - Clean project structure with proper separation of concerns
-- [ ] **Phase 2: Tauri Shell** - Rust backend with SQLite persistence
+- [x] **Phase 2: Tauri Shell** - Rust backend with SQLite persistence
 - [ ] **Phase 3: Node Backend** - React frontend and Hono server
 - [ ] **Phase 4: Launcher UI** - Spotlight-style task dispatch interface
 - [ ] **Phase 5: Agent Runtime** - Background execution via universal-agent-harness
@@ -50,10 +50,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Rust project structure, error types, frameless window, system tray
-- [ ] 02-02-PLAN.md — Keyring secrets management and SQLite database initialization
-- [ ] 02-03-PLAN.md — MCP server config and process lifecycle management
-- [ ] 02-04-PLAN.md — Final integration, wiring, and production build verification
+- [x] 02-01-PLAN.md — Rust project structure, error types, frameless window, system tray (completed 2026-01-31)
+- [x] 02-02-PLAN.md — Keyring secrets management and SQLite database initialization (completed 2026-01-31)
+- [x] 02-03-PLAN.md — MCP server config and process lifecycle management (completed 2026-01-31)
+- [x] 02-04-PLAN.md — Final integration, wiring, and production build verification (completed 2026-01-31)
 
 ### Phase 3: Node Backend
 **Goal**: React frontend and Hono HTTP server operational
@@ -151,7 +151,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup | 2/2 | Complete | 2026-01-31 |
-| 2. Tauri Shell | 0/4 | Not started | - |
+| 2. Tauri Shell | 4/4 | Complete | 2026-01-31 |
 | 3. Node Backend | 0/TBD | Not started | - |
 | 4. Launcher UI | 0/TBD | Not started | - |
 | 5. Agent Runtime | 0/TBD | Not started | - |

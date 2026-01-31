@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-01-31)
 
 **Core value:** Background agents that act relentlessly without human intervention
-**Current focus:** Phase 2 - Tauri Shell
+**Current focus:** Phase 3 - Node Backend
 
 ## Current Position
 
