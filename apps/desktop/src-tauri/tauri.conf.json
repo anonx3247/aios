@@ -12,8 +12,13 @@
     "windows": [
       {
         "title": "AIOS",
-        "width": 1200,
-        "height": 800
+        "label": "main",
+        "width": 750,
+        "height": 500,
+        "center": true,
+        "decorations": false,
+        "visible": true,
+        "focus": true
       }
     ],
     "security": {
