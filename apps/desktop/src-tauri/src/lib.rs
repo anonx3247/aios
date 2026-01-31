@@ -97,7 +97,11 @@ pub fn run() {
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
-            commands::health::health_check
+            commands::health::health_check,
+            commands::secrets::get_secrets,
+            commands::secrets::get_secret,
+            commands::secrets::set_secret,
+            commands::secrets::delete_secret
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
