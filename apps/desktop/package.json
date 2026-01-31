@@ -10,11 +10,13 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@aios/shared": "workspace:*",
     "@tauri-apps/api": "^2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@aios/typescript-config": "workspace:*",
     "@tauri-apps/cli": "^2",
     "@tailwindcss/vite": "^4",
     "@types/react": "^19",

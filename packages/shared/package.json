@@ -1,0 +1,15 @@
+{
+  "name": "@aios/shared",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@aios/typescript-config": "workspace:*",
+    "typescript": "^5.7"
+  }
+}
