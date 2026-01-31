@@ -3,6 +3,7 @@
   "extends": "@aios/typescript-config/base.json",
   "include": ["src"],
   "compilerOptions": {
+    "composite": true,
     "outDir": "./dist",
     "rootDir": "./src"
   }
